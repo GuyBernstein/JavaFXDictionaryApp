@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <children>
+                <Label text="Term:" />
+                <TextField fx:id="termTextField" prefWidth="200.0" />
+                <Label text="Meaning:" />
+                <TextField fx:id="meaningTextField" prefWidth="300.0" />
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <children>
+                <Button fx:id="addButton" onAction="#handleAddEntry" text="Add Entry" />
+                <Button fx:id="updateButton" onAction="#handleUpdateEntry" text="Update Entry" />
+                <Button fx:id="deleteButton" onAction="#handleDeleteEntry" text="Delete Entry" />
+                <Button fx:id="findButton" onAction="#handleFindTerm" text="Find Term" />
+                <Button fx:id="printButton" onAction="#handlePrintEntries" text="Print Entries" />
+            </children>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </HBox>
+        <TextArea fx:id="outputTextArea" editable="false" prefHeight="300.0" prefWidth="200.0" wrapText="true">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </TextArea>
+    </children>
+</VBox>
